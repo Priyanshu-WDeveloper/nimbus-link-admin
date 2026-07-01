@@ -36,18 +36,18 @@ export default function NewConnectionPage() {
           <TabBtn active={tab === 'assigned'} onClick={() => setTab('assigned')}>Assigned</TabBtn>
         </div>
         <div className="flex flex-wrap items-center gap-3 border-b border-border p-4">
-          <select className="h-9 rounded-lg border border-border bg-panel-2 px-3 text-sm text-foreground focus:border-brand focus:outline-none">
+          <select className="h-9 rounded-lg border border-border bg-panel-2 px-3 text-sm text-foreground transition focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30">
             <option>All Status</option>
             <option>New</option>
             <option>In Progress</option>
             <option>Completed</option>
           </select>
-          <input defaultValue="01 May, 2026 – 31 May, 2026" className="h-9 w-56 rounded-lg border border-border bg-panel-2 px-3 text-sm text-foreground focus:border-brand focus:outline-none" />
+          <input defaultValue="01 May, 2026 – 31 May, 2026" className="h-9 w-56 rounded-lg border border-border bg-panel-2 px-3 text-sm text-foreground transition focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30" />
           <div className="relative min-w-[220px] flex-1">
             <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-            <input placeholder="Search by name, phone or area…" className="h-9 w-full rounded-lg border border-border bg-panel-2 pl-9 pr-3 text-sm text-foreground focus:border-brand focus:outline-none" />
+            <input placeholder="Search by name, phone or area…" className="h-9 w-full rounded-lg border border-border bg-panel-2 pl-9 pr-3 text-sm text-foreground transition focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30" />
           </div>
-          <button className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-border bg-panel-2 px-3 text-sm font-medium text-foreground hover:bg-panel">
+          <button className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-border bg-panel-2 px-3 text-sm font-medium text-foreground transition hover:bg-panel active:scale-[0.97]">
             <Download className="h-4 w-4" /> Export
           </button>
         </div>
@@ -83,7 +83,7 @@ export default function NewConnectionPage() {
           <span>Showing 1 to 7 of 128 entries</span>
           <div className="flex items-center gap-1">
             {[1, 2, 3, 4, 5, '…', 19].map((n, i) => (
-              <button key={i} className={`h-8 min-w-8 rounded-md px-2 text-xs font-medium ${n === 1 ? 'bg-brand text-brand-foreground' : 'border border-border bg-panel-2 text-foreground hover:bg-panel'}`}>{n}</button>
+              <button key={i} className={`h-8 min-w-8 rounded-md px-2 text-xs font-medium transition active:scale-[0.97] ${n === 1 ? 'bg-brand text-brand-foreground' : 'border border-border bg-panel-2 text-foreground hover:bg-panel'}`}>{n}</button>
             ))}
           </div>
         </div>

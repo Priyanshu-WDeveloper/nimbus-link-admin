@@ -36,8 +36,8 @@ export default function SettingsPage() {
             <Toggle defaultChecked />
           </div>
           <div className="mt-6 flex justify-end gap-2">
-            <button className="rounded-lg border border-border bg-panel-2 px-4 py-2 text-sm font-medium text-foreground hover:bg-panel">Cancel</button>
-            <button className="inline-flex items-center gap-1.5 rounded-lg bg-[image:var(--gradient-brand)] px-4 py-2 text-sm font-semibold text-brand-foreground shadow-[var(--shadow-glow)]">
+            <button className="rounded-lg border border-border bg-panel-2 px-4 py-2 text-sm font-medium text-foreground transition hover:bg-panel active:scale-[0.97]">Cancel</button>
+            <button className="inline-flex items-center gap-1.5 rounded-lg bg-[image:var(--gradient-brand)] px-4 py-2 text-sm font-semibold text-brand-foreground shadow-[var(--shadow-glow)] transition active:scale-[0.97]">
               <Save className="h-4 w-4" /> Save Changes
             </button>
           </div>

@@ -187,7 +187,7 @@ export default function WebsiteConfigPage() {
                         <Wifi className="h-5 w-5 text-brand" />
                         <span className="font-display text-sm font-semibold text-foreground">NimbusLink</span>
                       </div>
-                      <button className="rounded-md border border-border bg-panel px-3 py-1.5 text-xs font-medium text-foreground transition hover:bg-panel-2">Change Logo</button>
+                      <button className="rounded-md border border-border bg-panel px-3 py-1.5 text-xs font-medium text-foreground transition hover:bg-panel-2 active:scale-[0.97]">Change Logo</button>
                       <span className="ml-auto text-[11px] text-muted-foreground">Recommended: 512×512px, PNG or SVG</span>
                     </div>
                   </div>
@@ -199,7 +199,7 @@ export default function WebsiteConfigPage() {
                       <div className="grid h-16 w-16 place-items-center rounded-md bg-[image:var(--gradient-brand)] text-brand-foreground shadow-[var(--shadow-glow)]">
                         <Wifi className="h-6 w-6" strokeWidth={2.5} />
                       </div>
-                      <button className="rounded-md border border-border bg-panel px-3 py-1.5 text-xs font-medium text-foreground transition hover:bg-panel-2">Change Favicon</button>
+                      <button className="rounded-md border border-border bg-panel px-3 py-1.5 text-xs font-medium text-foreground transition hover:bg-panel-2 active:scale-[0.97]">Change Favicon</button>
                       <span className="text-[11px] text-muted-foreground">Recommended: 32×32px, PNG or ICO</span>
                     </div>
                   </div>
@@ -229,7 +229,7 @@ export default function WebsiteConfigPage() {
                   <div className="text-sm font-semibold text-foreground">Live</div>
                   <div className="text-xs text-muted-foreground">Site last updated 28 May, 2026 · 03:15 PM</div>
                 </div>
-                <button className="ml-auto rounded-md border border-border bg-panel px-3 py-1.5 text-xs font-medium text-foreground transition hover:bg-panel-2">Toggle Maintenance</button>
+                <button className="ml-auto rounded-md border border-border bg-panel px-3 py-1.5 text-xs font-medium text-foreground transition hover:bg-panel-2 active:scale-[0.97]">Toggle Maintenance</button>
               </div>
             </>
           ) : (
@@ -310,7 +310,7 @@ export default function WebsiteConfigPage() {
                     </div>
                     <p className="text-sm font-medium text-foreground">Drag and drop or click to upload</p>
                     <p className="text-xs text-muted-foreground">Recommended: 1800×900px, JPEG or PNG</p>
-                    <button className="mt-2 rounded-md border border-border bg-panel px-4 py-1.5 text-xs font-medium text-foreground hover:bg-panel-2">Choose File</button>
+                    <button className="mt-2 rounded-md border border-border bg-panel px-4 py-1.5 text-xs font-medium text-foreground transition hover:bg-panel-2 active:scale-[0.97]">Choose File</button>
                   </div>
                 </div>
               </div>
@@ -495,7 +495,7 @@ export default function WebsiteConfigPage() {
                       <SectionTitle>Section Visibility</SectionTitle>
                       <label className="relative inline-flex cursor-pointer items-center">
                         <input type="checkbox" defaultChecked className="peer sr-only" />
-                        <div className="h-5 w-9 rounded-full bg-panel-2 after:absolute after:left-[2px] after:top-[2px] after:h-4 after:w-4 after:rounded-full after:bg-white after:transition-all peer-checked:bg-brand peer-checked:after:translate-x-full" />
+                        <div className="h-5 w-9 rounded-full bg-panel-2 after:absolute after:left-[2px] after:top-[2px] after:h-4 after:w-4 after:rounded-full after:bg-foreground after:transition-all peer-checked:bg-brand peer-checked:after:translate-x-full" />
                       </label>
                     </div>
                     <p className="mt-2 text-xs text-muted-foreground">Show the plans section on the website</p>
@@ -532,9 +532,9 @@ export default function WebsiteConfigPage() {
                             <p className="text-sm font-medium text-foreground">Drag & drop or click to upload</p>
                             <p className="text-xs text-muted-foreground">Recommended: 1600×900px, JPEG or PNG</p>
                             <div className="mt-2 flex items-center gap-2">
-                              <button className="rounded-md border border-border bg-panel px-3 py-1 text-xs font-medium text-foreground transition hover:bg-panel-2">Choose File</button>
-                              <button className="rounded-md border border-border bg-panel px-3 py-1 text-xs font-medium text-muted-foreground transition hover:bg-panel-2">Replace</button>
-                              <button className="rounded-md border border-border bg-panel px-3 py-1 text-xs font-medium text-muted-foreground transition hover:bg-panel-2">Remove</button>
+                              <button className="rounded-md border border-border bg-panel px-3 py-1 text-xs font-medium text-foreground transition hover:bg-panel-2 active:scale-[0.97]">Choose File</button>
+                              <button className="rounded-md border border-border bg-panel px-3 py-1 text-xs font-medium text-muted-foreground transition hover:bg-panel-2 active:scale-[0.97]">Replace</button>
+                              <button className="rounded-md border border-border bg-panel px-3 py-1 text-xs font-medium text-muted-foreground transition hover:bg-panel-2 active:scale-[0.97]">Remove</button>
                             </div>
                           </div>
                         </div>
@@ -543,7 +543,7 @@ export default function WebsiteConfigPage() {
                           <div>
                             <FieldLabel>Upload MP4</FieldLabel>
                             <div className="mt-1 rounded-lg border-2 border-dashed border-border bg-panel-2 p-4 text-center transition hover:border-brand/50">
-                              <button className="rounded-md border border-border bg-panel px-3 py-1 text-xs font-medium text-foreground transition hover:bg-panel-2">Choose Video</button>
+                              <button className="rounded-md border border-border bg-panel px-3 py-1 text-xs font-medium text-foreground transition hover:bg-panel-2 active:scale-[0.97]">Choose Video</button>
                             </div>
                           </div>
                           <Field label="YouTube URL" value="" onChange={() => {}} />
@@ -563,7 +563,7 @@ export default function WebsiteConfigPage() {
                   <div className="panel-surface p-5">
                     <div className="flex items-center justify-between">
                       <SectionTitle>Statistics</SectionTitle>
-                      <button onClick={() => setStats(prev => [...prev, { id: Date.now(), icon: '📊', value: '', label: '' }])} className="inline-flex items-center gap-1 rounded-md border border-border bg-panel-2 px-2.5 py-1 text-xs font-medium text-foreground hover:bg-panel">
+                      <button onClick={() => setStats(prev => [...prev, { id: Date.now(), icon: '📊', value: '', label: '' }])} className="inline-flex items-center gap-1 rounded-md border border-border bg-panel-2 px-2.5 py-1 text-xs font-medium text-foreground transition hover:bg-panel active:scale-[0.97]">
                         <Plus className="h-3.5 w-3.5" /> Add Stat
                       </button>
                     </div>
@@ -798,8 +798,8 @@ export default function WebsiteConfigPage() {
               <div className="mt-6">
                 <div className="flex items-center justify-between">
                   <SectionTitle>Coverage Categories</SectionTitle>
-                  <button onClick={() => setCoverageCats(prev => [...prev, { id: Date.now(), label: '' }])} className="inline-flex items-center gap-1 rounded-md border border-border bg-panel-2 px-2.5 py-1 text-xs font-medium text-foreground hover:bg-panel">
-                    <Plus className="h-3.5 w-3.5" /> Add Category
+                  <button onClick={() => setCoverageCats(prev => [...prev, { id: Date.now(), label: '' }])} className="inline-flex items-center gap-1 rounded-md border border-border bg-panel-2 px-2.5 py-1 text-xs font-medium text-foreground transition hover:bg-panel active:scale-[0.97]">
+                        <Plus className="h-3.5 w-3.5" /> Add Category
                   </button>
                 </div>
                 <div className="mt-3 flex flex-wrap gap-2">

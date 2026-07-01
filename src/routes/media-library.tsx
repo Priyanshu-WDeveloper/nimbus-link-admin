@@ -30,13 +30,13 @@ export default function MediaLibraryPage() {
     <AdminShell title="Media Library">
       <div className="panel-surface">
         <div className="flex items-center justify-between border-b border-border px-4 pt-4 pb-3">
-          <div className="flex flex-wrap items-center gap-1">
+          <div className="relative flex flex-wrap items-center gap-1">
             {tabs.map((t) => (
               <button key={t} onClick={() => setActive(t)}
-                className={`rounded-md px-3 py-1.5 text-xs font-medium transition ${active === t ? 'bg-brand/15 text-brand' : 'text-muted-foreground hover:bg-panel-2 hover:text-foreground'}`}>{t}</button>
+                className={`relative px-3 py-1.5 text-xs font-medium transition ${active === t ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'}`}>{t}{active === t && <span className="absolute -bottom-px left-0 right-0 h-0.5 rounded-full bg-brand" />}</button>
             ))}
           </div>
-          <button className="inline-flex h-9 items-center gap-1.5 rounded-lg bg-[image:var(--gradient-brand)] px-3 text-xs font-semibold text-brand-foreground shadow-[var(--shadow-glow)]">
+          <button className="inline-flex h-9 items-center gap-1.5 rounded-lg bg-[image:var(--gradient-brand)] px-3 text-xs font-semibold text-brand-foreground shadow-[var(--shadow-glow)] transition active:scale-[0.97]">
             <Upload className="h-4 w-4" /> Upload New
           </button>
         </div>
@@ -66,7 +66,7 @@ export default function MediaLibraryPage() {
           <span>Showing 1 to 10 of 45 files</span>
           <div className="flex items-center gap-1">
             {[1, 2, 3, 4, 5].map((n) => (
-              <button key={n} className={`h-8 min-w-8 rounded-md px-2 text-xs font-medium ${n === 1 ? 'bg-brand text-brand-foreground' : 'border border-border bg-panel-2 text-foreground hover:bg-panel'}`}>{n}</button>
+              <button key={n} className={`h-8 min-w-8 rounded-md px-2 text-xs font-medium transition active:scale-[0.97] ${n === 1 ? 'bg-brand text-brand-foreground' : 'border border-border bg-panel-2 text-foreground hover:bg-panel'}`}>{n}</button>
             ))}
           </div>
         </div>
@@ -82,7 +82,7 @@ export default function MediaLibraryPage() {
 
 function StorageCard({ icon: Icon, label, value }: { icon: React.ComponentType<{ className?: string }>; label: string; value: string }) {
   return (
-    <div className="panel-surface flex items-center gap-3 p-4">
+    <div className="panel-surface flex items-center gap-3 p-4 transition hover:border-brand/30 hover:shadow-md">
       <div className="grid h-11 w-11 place-items-center rounded-lg bg-brand/15 text-brand"><Icon className="h-5 w-5" /></div>
       <div>
         <div className="text-xs text-muted-foreground">{label}</div>

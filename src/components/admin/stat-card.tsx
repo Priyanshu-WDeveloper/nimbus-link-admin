@@ -25,7 +25,7 @@ export function StatCard({
   tone?: Tone;
 }) {
   return (
-    <div className="panel-surface flex items-start gap-4 p-5">
+    <div className="panel-surface flex items-start gap-4 p-5 transition hover:border-brand/30 hover:shadow-md">
       <div
         className={cn(
           'grid h-14 w-14 place-items-center rounded-xl',
@@ -35,7 +35,7 @@ export function StatCard({
         <Icon className="h-6 w-6" />
       </div>
       <div className="min-w-0 flex-1">
-        <div className="text-[13px] font-medium text-muted-foreground">
+        <div className="text-sm font-medium text-muted-foreground">
           {label}
         </div>
         <div className="mt-0.5 font-display text-3xl font-semibold tracking-tight text-foreground">

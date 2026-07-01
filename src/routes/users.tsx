@@ -26,11 +26,11 @@ export default function UsersPage() {
     <AdminShell title="Users & Roles">
       <div className="panel-surface">
         <div className="flex items-center justify-between border-b border-border px-4 pt-4 pb-3">
-          <div className="flex items-center gap-1">
-            <button className="rounded-md bg-brand/15 px-3 py-1.5 text-xs font-medium text-brand">All Users</button>
-            <button className="rounded-md px-3 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground">Roles</button>
+          <div className="relative flex items-center gap-1">
+            <button className="relative px-3 py-1.5 text-xs font-medium text-foreground transition hover:text-foreground">All Users<span className="absolute -bottom-px left-0 right-0 h-0.5 rounded-full bg-brand" /></button>
+            <button className="relative px-3 py-1.5 text-xs font-medium text-muted-foreground transition hover:text-foreground">Roles</button>
           </div>
-          <button className="inline-flex h-9 items-center gap-1.5 rounded-lg bg-[image:var(--gradient-brand)] px-3 text-xs font-semibold text-brand-foreground shadow-[var(--shadow-glow)]">
+          <button className="inline-flex h-9 items-center gap-1.5 rounded-lg bg-[image:var(--gradient-brand)] px-3 text-xs font-semibold text-brand-foreground shadow-[var(--shadow-glow)] transition active:scale-[0.97]">
             <UserPlus className="h-4 w-4" /> Add User
           </button>
         </div>
